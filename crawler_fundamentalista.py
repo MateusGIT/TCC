@@ -116,9 +116,9 @@ def process_and_insert(href):
 
 
 #INICIA SESSAO CLIENT MONGO
-cliente = MongoClient("mongodb+srv://admin:admin@cluster0-zfnw0.mongodb.net/test?retryWrites=true&w=majority")
-database = cliente.test_crawler
-collection = database.test_crawler_collection
+cliente = MongoClient("mongodb://admin:admin@clusterrpa-shard-00-00-fen33.mongodb.net:27017,clusterrpa-shard-00-01-fen33.mongodb.net:27017,clusterrpa-shard-00-02-fen33.mongodb.net:27017/test?ssl=true&replicaSet=ClusterRPA-shard-0&authSource=admin&retryWrites=true&w=majority")
+database = cliente.tcc_db
+collection = database.fundamentalista_data_collection
 
 #INICIA SESSAO REQUESTS
 session = requests.session()
